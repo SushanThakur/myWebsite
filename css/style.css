@@ -1,12 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto+Mono:wght@100&display=swap');
 html{
     font-size: 62.5%;
 }
-body{
+*{
     padding: 0;
     border: 0;
     box-sizing: border-box;
-    background-color: #292b2b;
-    height: 200%;
+    outline: 0;
+}
+body{
+    margin: 0;
+    background-color: #1e1f1f;
+}
+.bgsection{
+    position: absolute;
+    height: 205%;
+    width: 100%;
+    background: url(..//bg/bg2.jpg);
+    background-size:cover;
+    background-position:center;
+    filter: blur(5px) brightness(50%);
 }
 .disco1{
     position: fixed;
@@ -14,7 +28,7 @@ body{
     left: 1%;
     padding-left: 1.5%;
     height: auto;
-    width: 10rem;
+    width: 15rem;
     animation: disco1 0.9s alternate-reverse infinite;
     transform-origin: top;
     transform-box: fill-box;
@@ -25,7 +39,7 @@ body{
     right: 3.1%;
     padding-left: 1.5%;
     height: auto;
-    width: 10rem;
+    width: 15rem;
     animation: disco2 0.9s alternate-reverse infinite;
     transform-origin: top;
     transform-box: fill-box;
@@ -51,49 +65,6 @@ body{
     top: 24%;
     right: 7%;
 }
-@keyframes disco1{
-    0%{
-        opacity: 100%;
-        transform: rotateZ(20deg);
-    }
-
-    50%{
-        opacity: 50%;
-    }
-    
-    100%{
-        transform: rotateZ(-20deg) ;
-        opacity: 100%;
-    }
-}
-@keyframes disco2{
-    0%{
-        opacity: 100%;
-        transform: rotateZ(-20deg);
-    }
-
-    50%{
-        opacity: 50%;
-    }
-    
-    100%{
-        transform: rotateZ(20deg) ;
-        opacity: 100%;
-    }
-}
-@keyframes border{
-    0%{
-        border-color: rgb(231, 37, 37);
-        border-style: dotted solid dashed double;
-    }
-    50%{
-        border-color: rgb(28, 207, 28);
-    }
-    100%{
-        border-color: rgb(53, 50, 231);
-        border-style: dotted solid dashed double;
-    }
-}
 .lineTop{
     position: fixed;
     top: 0;
@@ -104,7 +75,7 @@ body{
 }
 .lineBottom{
     position: absolute;
-    bottom: -102%;
+    bottom: -105%;
     width: 99%;
     border-color: red;
     border-width: 0.2rem;
@@ -120,64 +91,6 @@ body{
     padding-bottom: 1rem;
     width: 5rem;
     height: auto;
-}
-.textareaalign{
-    position: absolute;
-    bottom: -86%;
-    left: 1rem;
-    width: 15%;
-    height: 23rem;
-    border: 1rem solid green;
-    border-top-left-radius: 2rem;
-    border-right-width: 0px;
-    animation: feedbackborderanimation 2s linear infinite;
-}
-.textArea{
-    font-size: 2rem;
-    background-color: rgb(214, 166, 166);
-    border-width: 0.3rem;
-    border-color: greenyellow;
-}
-.textareafontandanimation{
-    font-size: 2rem;
-    color: white;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-shadow: rgb(255, 255, 255);
-    animation: textareaanimation 2s linear infinite;
-}
-.submitbutton{
-    background: none;
-    border-color: greenyellow;
-    border-radius: 5px;
-    border-top-left-radius: 0rem;
-    border-top-right-radius: 0rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 8rem;
-    padding-right: 8.4rem;
-    color: white; 
-    font-size: 2.5rem;
-}
-.submitbutton:hover{
-    background-color: rgb(92, 48, 112);
-}
-.nameinput{
-    position: absolute;
-    right: -22%;
-    width: 15rem;
-    border-color: greenyellow;
-    font-size: 1.5rem;
-    background-color: rgb(214, 166, 166);  
-}
-@keyframes textareaanimation{
-    0%{color: rgb(250, 108, 108);}
-    50%{color: green;}
-    100%{color: rgb(106, 106, 219);}
-}
-@keyframes feedbackborderanimation{
-    0%{border-color: rgb(243, 195, 195);}
-    50%{border-color: rgb(165, 248, 165);}
-    100%{border-color: rgb(151, 151, 247);}
 }
 .mansvgalign{
     position: absolute;
@@ -195,71 +108,19 @@ body{
 	transform-origin: bottom;
 	transform-box: fill-box;
 }
-@keyframes suitleftanimation{
-	from{
-		transform: rotateX(0deg);
-	}
-	to{
-		transform: rotateX(25deg);
-	}
-}
-@keyframes hairAnimation{
-	from{
-		transform: rotateX(0deg);
-	}
-	to{
-		transform: rotateX(25deg);
-	}
-}
 #cloud1, #cloud2{
 	position: relative;
 	animation: leftcloudanimation 3s alternate infinite;
 	transform-origin: left;
 }
-@keyframes leftcloudanimation{
-	0%{
-		transform: rotateX(0deg);
-	}
-	100%{
-		transform: rotateX(25deg);
-	}
-}
 #down1{animation: downanimation 1s alternate infinite;}
 #down2{animation: downanimation 1.5s alternate infinite;}
 #down3{animation: downanimation 0.9s alternate infinite;}
-@keyframes downanimation{
-	from{
-		opacity: 0%;
-	}
-	to{
-		opacity: 100%;
-	}
-}
 .catsvg{
     position: absolute;
     bottom: -10%;
     width: 70rem;
     left: 0;
-}
-@keyframes leavesanimation{
-    from{transform: rotateX(-20deg) rotateZ(-5deg);}
-    to{transform: rotateX(20deg) rotateZ(5deg);}
-}
-@keyframes catbodyanimation{
-    from{transform: rotateX(0deg);}
-    to{transform: rotateX(20deg);}
-}
-@keyframes cateyeanimation{
-    from{transform: rotateX(0deg) rotateY(0deg);}
-    to{transform: rotateX(5deg) rotateY(5deg);}
-}
-@keyframes cattailanimation{
-    from{transform: rotateZ(0deg);}
-    to{transform: rotateZ(-25deg);}
-}
-@keyframes catfaceanimation{
-    from{transform: rotateX(0deg);}
-    to{transform: rotateX(20deg);}
 }
 #eyes{
     animation: cateyeanimation 1s alternate infinite;
@@ -268,7 +129,7 @@ body{
 }
 #tail{
     animation: cattailanimation 1s alternate infinite;
-    transform-origin: left;
+    transform-origin: right;
     transform-box: fill-box;
 }
 #body{
@@ -288,29 +149,147 @@ body{
 }
 .mainheading{
     position: absolute;
-    top: 17.5rem;
-    left: 35rem;
+    top: 16rem;
+    left: 30rem;
     border-radius: 2rem;
     animation: headingborderanimation 0.5s linear infinite;
     padding: 1rem;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Roboto Mono', monospace;
 }
 .headingfont{
     font-size: 4rem;
-    font-weight: bold;
+    font-weight: bolder;
     color: white;
     animation: headingfontanimation 0.5s linear infinite;
 }
 .semiheadingfont{
     font-size: 3rem;
+    font-weight: 600;
+    padding-left: 0.5rem;
     color: white;
-    padding-left: 2rem;
     animation: headingfontanimation 0.5s linear infinite;
 }
 .semiheadingfont2{
     font-size: 3rem;
+    font-weight: 600;
     color: white;
-    padding-left: 5rem;
+    padding-left: 4rem;
     animation: headingfontanimation 0.5s linear infinite;
+}
+.quote{
+    position: absolute;
+    bottom: -90%;
+    width: 40%;
+}
+.quotefont{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    animation: headingfontanimation 0.5s linear infinite;
+}
+.someinfo{
+    position: absolute;
+    width: 95%;
+    bottom: -103.2%;
+    left: 2rem;
+    text-align: center;
+}
+.someinfofont{
+    color: white;
+    font-size: 1.5rem;
+}
+@keyframes disco1{
+    0%{
+        opacity: 100%;
+        transform: rotateZ(20deg);
+    }
+    50%{
+        opacity: 50%;
+    } 
+    100%{
+        transform: rotateZ(-20deg) ;
+        opacity: 100%;
+    }
+}
+@keyframes disco2{
+    0%{
+        opacity: 100%;
+        transform: rotateZ(-20deg);
+    }
+    50%{
+        opacity: 50%;
+    }
+    100%{
+        transform: rotateZ(20deg) ;
+        opacity: 100%;
+    }
+}
+@keyframes border{
+    0%{
+        border-color: rgb(231, 37, 37);
+        border-style: dotted solid dashed double;
+    }
+    50%{
+        border-color: rgb(28, 207, 28);
+    }
+    100%{
+        border-color: rgb(53, 50, 231);
+        border-style: dotted solid dashed double;
+    }
+}
+@keyframes suitleftanimation{
+	from{
+		transform: rotateX(0deg);
+	}
+	to{
+		transform: rotateX(25deg);
+	}
+}
+@keyframes hairAnimation{
+	from{
+		transform: rotateX(0deg);
+	}
+	to{
+		transform: rotateX(25deg);
+	}
+}
+@keyframes leftcloudanimation{
+	0%{
+		transform: rotateX(0deg);
+	}
+	100%{
+		transform: rotateX(25deg);
+	}
+}
+@keyframes downanimation{
+	from{
+		opacity: 0%;
+	}
+	to{
+		opacity: 100%;
+	}
+}
+@keyframes leavesanimation{
+    from{transform: rotateX(-20deg) rotateZ(-5deg);}
+    to{transform: rotateX(20deg) rotateZ(5deg);}
+}
+@keyframes catbodyanimation{
+    from{transform: rotateX(0deg);}
+    to{transform: rotateX(20deg);}
+}
+@keyframes cateyeanimation{
+    from{transform: rotateX(0deg) rotateY(0deg);}
+    to{transform: rotateX(5deg) rotateY(5deg);}
+}
+@keyframes cattailanimation{
+    from{transform: rotateZ(0deg);}
+    to{transform: rotateZ(25deg);}
+}
+@keyframes catfaceanimation{
+    from{transform: rotateX(0deg);}
+    to{transform: rotateX(20deg);}
 }
 @keyframes headingborderanimation{
     0%{
@@ -347,8 +326,17 @@ body{
         border: 0;
         box-sizing: border-box;
         background-color: #292b2b;
-        height: 200%;
+        height: 40%;
         width: 90%;
+    }
+    .bgsection{
+        position: absolute;
+        height: 140%;
+        width: 100%;
+        background: url(..//bg/bg2.jpg);
+        background-size:cover;
+        background-position:center;
+        filter: blur(5px) brightness(50%);
     }
     .dp{
         height: auto;
@@ -366,16 +354,68 @@ body{
         top: 24%;
         right: 10%;
     }
+    .mainheading{
+        position: absolute;
+        top: 30rem;
+        left: 0;
+        animation: headingborderanimation 0.5s linear infinite;
+        padding: 1rem;
+        font-family: 'Dancing Script', cursive;
+        font-family: 'Roboto Mono', monospace;
+    }
+    .headingfont{
+        font-size: 2.8rem;
+        font-weight: bolder;
+        color: white;
+        animation: headingfontanimation 0.5s linear infinite;
+    }
+    .semiheadingfont{
+        font-size: 2rem;
+        font-weight: 600;
+        padding-left: 0.5rem;
+        color: white;
+        animation: headingfontanimation 0.5s linear infinite;
+    }
+    .semiheadingfont2{
+        font-size: 2rem;
+        font-weight: 600;
+        color: white;
+        padding-left: 3rem;
+        animation: headingfontanimation 0.5s linear infinite;
+    }
+    .quote{
+        position: absolute;
+        bottom: -15%;
+        width: 100%;
+    }
+    .quotefont{
+        font-family: 'Roboto Mono', monospace;
+        font-size: 2rem;
+        font-weight: bold;
+        color: white;
+        animation: headingfontanimation 0.5s linear infinite;
+    }
+    .someinfo{
+        position: absolute;
+        width: 95%;
+        bottom: -35%;
+        left: 2rem;
+        text-align: left;
+    }
+    .someinfofont{
+        color: white;
+        font-size: 1rem;
+    }
     .catsvg{
         position: absolute;
-        bottom: -10%;
+        bottom: 10rem;
         width: 70%;
         right: 2.5rem;
     }
     .mansvgalign{
         position: absolute;
         bottom: -35%;
-        width:70%;
+        width:50%;
     }
     .disco1{
         position: fixed;
@@ -383,7 +423,7 @@ body{
         left: 1%;
         padding-left: 1.5%;
         height: auto;
-        width: 10rem;
+        width: 13rem;
         animation: disco1 0.9s alternate-reverse infinite;
         transform-origin: top;
         transform-box: fill-box;
@@ -394,7 +434,7 @@ body{
         right: 10%;
         padding-left: 1.5%;
         height: auto;
-        width: 10rem;
+        width: 13rem;
         animation: disco2 0.9s alternate-reverse infinite;
         transform-origin: top;
         transform-box: fill-box;
@@ -410,50 +450,18 @@ body{
         width: 5rem;
         height: auto;
     }
-    .textareadiv{
-        position: absolute;
-        bottom: -86%;
-        left: 8rem;
-        width: 13rem;
-        height: 28rem;
-        border: 1rem solid green;
-        border-top-left-radius: 2rem;
-        border-right-width: 0px;
-        animation: feedbackborderanimation 2s linear infinite;
-    }
-    .nameinput{
-        position: absolute;
-        left: 9rem;
-        width: 15rem;
-        border-color: greenyellow;
-        font-size: 1.5rem;
-        background-color: rgb(214, 166, 166);  
-    }
-    .submitbutton{
-        background: none;
-        border-color: greenyellow;
-        border-radius: 5px;
-        border-top-left-radius: 0rem;
-        border-top-right-radius: 0rem;
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-        padding-left: 8rem;
-        padding-right: 7.4rem;
-        color: white; 
-        font-size: 2.5rem;
-    }
     .lineTop{
         position: fixed;
         top: 0;
-        width: 90%;
+        width: 100%;
         border-color: red;
         border-width: 0.2rem;
         animation: border 1s linear infinite;
     }
     .lineBottom{
         position: absolute;
-        bottom: -102%;
-        width: 90%;
+        bottom: -40%;
+        width: 100%;
         border-color: red;
         border-width: 0.2rem;
         animation: border 1s linear infinite;
